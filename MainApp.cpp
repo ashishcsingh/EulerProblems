@@ -21,6 +21,7 @@ void testEulerProblem(int id) {
    unique_ptr<EulerProblem> problem(EulerProblemFactory::createEulerProblem(id));
    if(!problem.get()) {
       cout<<"Euler problem id: "<<id<<" : not implemented."<<endl;
+      return;
    }
 
    if(problem->test()) {
