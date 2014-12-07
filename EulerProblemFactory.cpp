@@ -34,11 +34,15 @@ EulerProblem *EulerProblemFactory::createEulerProblem(int id) {
    case 3:
       return new LargestPrimeFactor();
       break;
-   case 10:
-      return new PrimeSummation();
+   case 6:
+      return new DifferenceOfSquares();
       break;
    case 7:
       return new NthPrimeNumber();
+      break;
+   case 10:
+      return new PrimeSummation();
+      break;
    default:
       return nullptr;
    }

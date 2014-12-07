@@ -15,6 +15,14 @@ using namespace std;
 
 namespace euler {
 
+/*
+ * Name: sumToNum()
+ * Description: Compute sum of all numbers till $number
+ */
+double sumToNum(int number) {
+   return SumOfAllMultiples::sumToNum(number);
+}
+
 SumOfAllMultiples::SumOfAllMultiples() {
    // TODO Auto-generated constructor stub
 }
@@ -65,8 +73,7 @@ double SumOfAllMultiples::solution(double input) {
  * Name: test()
  * Description: Self tests
  */
-bool SumOfAllMultiples::test()
-{
+bool SumOfAllMultiples::test() {
    int input, output;
    bool result;
 
@@ -82,5 +89,44 @@ bool SumOfAllMultiples::test()
 
    return result;
 }
+
+/*
+ * Name:         solution()
+ * Description:  Calculate difference in sums of square till N
+ */
+double DifferenceOfSquares::solution(double input) {
+   double sumOfSquares = 0;
+   for(long i=1; i<=input; ++i) {
+      sumOfSquares += i*i;
+   }
+   double sum = 0;
+   for(long i=1; i<=input; ++i) {
+      sum += i;
+   }
+   return sum*sum - sumOfSquares;
+}
+
+/*
+ * Name:         solution()
+ * Description:  print self test
+ */
+bool DifferenceOfSquares::test() {
+   int input, output;
+   bool result;
+
+   input = 10;
+   output = solution(input);
+   cout<<"DifferenceOfSquares for "<<input<< " : "<<output<<endl;
+   assert(output == 2640);
+   result = output == 2640;
+
+   input = 100;
+   output = solution(input);
+   cout<<"DifferenceOfSquares for "<<input<< " : "<<output<<endl;
+
+   return result;
+}
+
+
 
 } /* namespace euler */

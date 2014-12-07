@@ -28,6 +28,15 @@ public:
    static double sumToNum(int number);
 };
 
+class DifferenceOfSquares: public EulerProblem {
+public:
+   virtual bool test();
+   virtual double solution(double input);
+};
+
+// Calculate sum till $number starting 1, [n*(n+1)/2]
+double sumToNum(int number);
+
 } /* namespace euler */
 
 #endif /* SUMMATIONS_H_ */
