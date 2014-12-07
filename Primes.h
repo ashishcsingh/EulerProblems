@@ -13,9 +13,9 @@
 
 namespace euler {
 
+// Summation of primes
 class PrimeSummation: public EulerProblem {
 public:
-   PrimeSummation();
    virtual ~PrimeSummation();
    // Overridden
    virtual bool test();
@@ -25,10 +25,9 @@ public:
    static void getPrimes(long limit, std::vector<long>& primes);
 };
 
-
+// Largest prime factor
 class LargestPrimeFactor: public EulerProblem {
 public:
-   LargestPrimeFactor();
    virtual ~LargestPrimeFactor();
    // Overridden
    virtual bool test();
@@ -38,9 +37,9 @@ public:
    static bool isPrime(long number);
 };
 
+// Nth prime number
 class NthPrimeNumber: public EulerProblem {
 public:
-   NthPrimeNumber();
    virtual ~NthPrimeNumber();
    // Overridden
    virtual bool test();

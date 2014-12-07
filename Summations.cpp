@@ -19,24 +19,28 @@ namespace euler {
  * Name: sumToNum()
  * Description: Compute sum of all numbers till $number
  */
-double sumToNum(int number) {
+long sumToNum(long number) {
    return SumOfAllMultiples::sumToNum(number);
 }
 
-SumOfAllMultiples::SumOfAllMultiples() {
-   // TODO Auto-generated constructor stub
+/*
+ * Name: sumOfSquares()
+ * Description: Compute sum of suqares of all numbers till $number
+ */
+long sumOfSquares(long number) {
+   return DifferenceOfSquares::sumOfSquares(number);
 }
+
 
 SumOfAllMultiples::~SumOfAllMultiples() {
    // TODO Auto-generated destructor stub
 }
 
-
 /*
  * Name: sumToNum()
  * Description: Compute sum of all numbers till $number
  */
-double SumOfAllMultiples::sumToNum(int number) {
+double SumOfAllMultiples::sumToNum(long number) {
    return number * (number + 1)/2;
 }
 
@@ -90,20 +94,26 @@ bool SumOfAllMultiples::test() {
    return result;
 }
 
+
+DifferenceOfSquares::~DifferenceOfSquares() {
+}
+
+
+/*
+ * Name:         sumOfSquares()
+ * Description:  Calculates sum of squares
+ */
+long DifferenceOfSquares::sumOfSquares(long number) {
+   return number * (2 * number + 1) * (number + 1)/6;
+}
+
 /*
  * Name:         solution()
  * Description:  Calculate difference in sums of square till N
  */
 double DifferenceOfSquares::solution(double input) {
-   double sumOfSquares = 0;
-   for(long i=1; i<=input; ++i) {
-      sumOfSquares += i*i;
-   }
-   double sum = 0;
-   for(long i=1; i<=input; ++i) {
-      sum += i;
-   }
-   return sum*sum - sumOfSquares;
+   long sumOfNumbers = sumToNum(input);
+   return sumOfNumbers * sumOfNumbers - sumOfSquares(input);
 }
 
 /*

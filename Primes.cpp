@@ -15,11 +15,6 @@ using namespace std;
 
 namespace euler {
 
-PrimeSummation::PrimeSummation() {
-   // TODO Auto-generated constructor stub
-
-}
-
 PrimeSummation::~PrimeSummation() {
    // TODO Auto-generated destructor stub
 }
@@ -129,9 +124,6 @@ bool LargestPrimeFactor::isPrime(long number) {
    return true;
 }
 
-LargestPrimeFactor::LargestPrimeFactor() {
-}
-
 LargestPrimeFactor::~LargestPrimeFactor() {
 }
 
@@ -157,9 +149,6 @@ bool LargestPrimeFactor::test()
    return result;
 }
 
-
-NthPrimeNumber::NthPrimeNumber() {
-}
 
 NthPrimeNumber::~NthPrimeNumber() {
 }
