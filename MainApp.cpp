@@ -37,5 +37,6 @@ int main()
    // EulerProblem tests with id
    testEulerProblem(1);
    testEulerProblem(3);
+   testEulerProblem(7);
    testEulerProblem(10);
 }

@@ -37,6 +37,8 @@ EulerProblem *EulerProblemFactory::createEulerProblem(int id) {
    case 10:
       return new PrimeSummation();
       break;
+   case 7:
+      return new NthPrimeNumber();
    default:
       return nullptr;
    }

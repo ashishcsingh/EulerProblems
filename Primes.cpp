@@ -25,6 +25,23 @@ PrimeSummation::~PrimeSummation() {
 }
 
 /*
+ * Name:        getPrimes()
+ * Description: Stores primes in $primes
+ */
+void getPrimes(long limit, std::vector<long>& primes) {
+   PrimeSummation::getPrimes(limit, primes);
+}
+
+
+/*
+ * Name:        isPrime()
+ * Description: Checks if prime in $number
+ */
+bool isPrime(long number) {
+   return LargestPrimeFactor::isPrime(number);
+}
+
+/*
  * Name:        test()
  * Description: Self tests
  */
@@ -136,6 +153,50 @@ bool LargestPrimeFactor::test()
    input = 600851475143;
    output = solution(input);
    cout<<"LargestPrimeFactor for "<<input<< " : "<<output<<endl;
+
+   return result;
+}
+
+
+NthPrimeNumber::NthPrimeNumber() {
+}
+
+NthPrimeNumber::~NthPrimeNumber() {
+}
+
+/*
+ * Name:        solution()
+ * Description: finds the Nth $number prime number
+ */
+double NthPrimeNumber::solution(double number) {
+   long nthPrime = 2;
+   long count = 1;
+   while (count < number) {
+      if(isPrime(++nthPrime)) {
+         ++count;
+      }
+   }
+   return nthPrime;
+}
+
+/*
+ * Name:        test()
+ * Description: Self tests
+ */
+bool NthPrimeNumber::test()
+{
+   long input, output;
+   bool result;
+
+   input = 6;
+   output = solution(input);
+   cout<<"NthPrimeNumber for "<<input<< " : "<<output<<endl;
+   assert(output == 13);
+   result = output == 13;
+
+   input = 10001;
+   output = solution(input);
+   cout<<"NthPrimeNumber for "<<input<< " : "<<output<<endl;
 
    return result;
 }
